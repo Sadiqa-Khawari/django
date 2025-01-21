@@ -12,7 +12,13 @@ from datetime import datetime
  
 # Create your views here.
 def Koti(request):
-    return HttpResponse("HEI MAAILMA!, Tervetuloa Djangoon! Tänään on " + str(datetime.now()))
+    now = datetime.now().strftime("%H:%M:%S")
+    context = {
+        "tervehdysteksti": "Tervetuloa mailmaan!",
+        "kelloaika": now,
+    }
+    return render(request, "web_project/testi.html", context)
+    #return HttpResponse("HEI MAAILMA!, Tervetuloa Djangoon! Tänään on " + str(datetime.now()))
 
 
 

@@ -4,6 +4,6 @@ from web_project import views
 
 
 urlpatterns = [
-    path("", views.Koti, name='web_project'),
+    path("", views.Koti, name='koti'),
    
 ]
